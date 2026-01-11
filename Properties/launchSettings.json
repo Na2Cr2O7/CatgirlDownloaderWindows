@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CatGirlDownloaderWindows2 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CatGirlDownloaderWindows2 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

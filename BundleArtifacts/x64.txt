@@ -1,0 +1,5 @@
+MainPackage=D:\Users\16928\source\repos\CatGirlDownloaderWindows2\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\CatGirlDownloaderWindows2_1.0.4.0_x64.msix
+ResourcePack=D:\Users\16928\source\repos\CatGirlDownloaderWindows2\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\CatGirlDownloaderWindows2_1.0.4.0_scale-100.msix
+ResourcePack=D:\Users\16928\source\repos\CatGirlDownloaderWindows2\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\CatGirlDownloaderWindows2_1.0.4.0_scale-125.msix
+ResourcePack=D:\Users\16928\source\repos\CatGirlDownloaderWindows2\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\CatGirlDownloaderWindows2_1.0.4.0_scale-150.msix
+ResourcePack=D:\Users\16928\source\repos\CatGirlDownloaderWindows2\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\CatGirlDownloaderWindows2_1.0.4.0_scale-400.msix

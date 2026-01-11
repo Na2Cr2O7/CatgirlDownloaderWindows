@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="CatGirlDownloaderWindows2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CatGirlDownloaderWindows2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CatGirlDownloaderWindows2">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="root">
+        <NavigationView x:Name="nvSample"
+    IsSettingsVisible="False"
+    IsBackButtonVisible="Collapsed"
+    IsBackEnabled="False"
+    ExpandedModeThresholdWidth="500"
+    SelectionFollowsFocus="Disabled"
+    IsTabStop="False"
+                        PaneDisplayMode="LeftCompact"
+                        >
+
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="About Art"/>
+                <NavigationViewItem Content="Website" Tag="1" x:Name="Website" Tapped="Website_Tapped">
+
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Share" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Credits" Tag="1" x:Name="Credits" Tapped="Credits_Tapped">
+
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="AddFriend" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItemHeader Content="Preferences"/>
+
+                <NavigationViewItem Content="" Icon="Setting" ToolTipService.ToolTip="Preferences" SelectsOnInvoked="True">
+                    <NavigationViewItem.MenuItems>
+
+
+
+                        <ComboBox Header="NSFW Mode" PlaceholderText="" Width="200" x:Name="SelectNSFW" ItemsSource="{x:Bind NSFWOptions}" SelectionChanged="SelectNSFW_SelectionChanged" >
+
+                        </ComboBox>
+                <NumberBox
+                x:Name="AutoReloadInterval"
+                Header="Auto Reload Interval"
+                    Minimum="1"
+                SpinButtonPlacementMode="Inline"
+                SmallChange="1"
+                LargeChange="1"
+                    ValueChanged="AutoReloadInterval_ValueChanged"
+                    
+                    />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+               
+            </NavigationView.MenuItems>
+
+
+            <NavigationView.PaneFooter>
+
+                <StackPanel x:Name="FooterStackPanel" Orientation="Vertical" Visibility="Visible">
+                    <NavigationViewItemHeader Content="About CatgirlDownloader" Tapped="NavigationViewItemHeader_Tapped"/>
+                    <NavigationViewItem Content="Credits" Tag="1" x:Name="Credits2" Tapped="Credits_Tapped_1">
+
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Favorite" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Legal" Tag="1" x:Name="Legal" Tapped="Legal_Tapped">
+
+                        <NavigationViewItem.Icon>
+                            <SymbolIcon Symbol="Link" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+
+                </StackPanel>
+            </NavigationView.PaneFooter>
+            <Frame x:Name="rootFrame"/>
+        </NavigationView>
+    </Grid>
+  
+
+</Window>
