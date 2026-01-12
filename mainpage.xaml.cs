@@ -80,7 +80,17 @@ namespace CatGirlDownloaderWindows2
             //Display.Source = bitmapImage;
             using var httpClient = new HttpClient();
             imageBytes = await httpClient.GetByteArrayAsync(url);
-
+            if (imageBytes.Length == 0)
+            {
+                //Retry
+                DispatcherTimer retry = new()
+                {
+                    Interval = TimeSpan.FromSeconds(1)
+                };
+                retry.Tick += (e, e2) => { retry.Stop(); NewImage(); };
+                retry.Start();
+                return;
+            }
             using (var stream = new MemoryStream(imageBytes))
             {
                 bitmapImage = new BitmapImage();
